@@ -1,0 +1,87 @@
+/*************** Layout & Generelle Stilarter *********************/
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+/* GALLERI MOBILEVIEW */
+@media (max-width: 1000px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .main {
+    max-width: 400px;
+  }
+
+  .img3 {
+    background-image: url(imgs/img3.webp);
+    background-size: cover;
+  }
+}
+
+/* GALLERI DESKTOPVIEW */
+@media (min-width: 1000px) {
+  /* MAIN */
+  .main {
+    max-width: 1000px;
+  }
+
+  /* VIDEO CONTAINER */
+  .video_container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 200px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video .video_container {
+    margin-top: 100px;
+  }
+
+  .grid_2-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .img2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .img3 {
+    background-image: url(imgs/img3_desktop.webp);
+    background-size: cover;
+    grid-column: span 2;
+  }
+}
